@@ -19,6 +19,14 @@ class Product
     all.find { |toy| toy.title == title }
   end
 
+  def self.in_stock
+    all.select(&:in_stock?)
+  end
+
+  def in_stock?
+    stock > 0
+  end
+
   private
 
   def add_to_products
