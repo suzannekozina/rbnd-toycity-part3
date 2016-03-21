@@ -4,8 +4,8 @@ class Customer
 
   @@customers = []
 
-  def initialize(name)
-    @name = name
+  def initialize(options = {})
+    @name = options[:name]
     add_to_customers
   end
 
@@ -13,13 +13,15 @@ class Customer
     @@customers
   end
 
+  def self.find_by_name(name)
+    all.find { |customer| customer.name == name}
+  end
+
   private
 
   def add_to_customers
     @@customers.each do |customer|
-      if customer.name == @name
-        raise DuplicateCustomerError, "'#{self.name}' already exists."
-      end
+        raise DuplicateCustomerError, "'#{self.name}' already exists." if customer.name == name
     end
     @@customers << self
   end
