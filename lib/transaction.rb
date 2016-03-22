@@ -22,6 +22,11 @@ class Transaction
     all.find { |transaction| transaction.id == id }
   end
 
+  # Return an array of all transactions associated with a given product
+  def self.transactions_for_product(product)
+    @@transactions.select{|t| t.product == product}
+  end
+
 private
 
   def add_to_transactions

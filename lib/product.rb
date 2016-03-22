@@ -6,8 +6,8 @@ class Product
 
   def initialize(options = {})
     @title = options[:title]
-    @price = options[:price]
-    @stock = options[:stock]
+    @price = options[:price].is_a?(Numeric) ? @price = options[:price] : raise(InvalidInputError, "Price value must be numeric, '#{options[:price]}' is invalid input")
+    @stock = options[:stock].is_a?(Numeric) ? @stock = options[:stock] : raise(InvalidInputError, "Stock value must be numeric, '#{options[:stock]}' is invalid input")
     add_to_products
   end
 
@@ -31,7 +31,7 @@ class Product
 
   def add_to_products
     @@products.each do |toy|
-        raise DuplicateProductError, "'#{self.title}' already exists." if toy.title == title
+        return puts "DuplicateProductError: '#{self.title}' already exists." unless toy.title != title
       end
 
     @@products << self
