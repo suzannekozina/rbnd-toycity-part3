@@ -1,0 +1,29 @@
+**How long did you spend working on this project?**
+In all I spent 10 hours working on this project. I spent roughly 5 hours on research and 5 hours on working with the actual code
+in the project.  I used checklists from the Odin Project (http://www.theodinproject.com/ruby-programming) to help make sure I was
+understaning concepts properly and implementing them with Ruby that is clean and understandable to me.
+
+**What was the most rewarding challenge you conquered?**
+It was very exciting for me to gain fluency with Git and Github. A while a go I had tried using Github Desktop to fork and clone,
+but I didn’t really get it working properly.  With this project not only was I able to get my push my local files back to my github
+repository, but I was also able to set up an SSH agent and push changes fluidly. This was so very rewarding!
+
+**What two additional features did you build? Why?**
+I built three additional features.  
+1. Invalid Input Error - I work with content management databases and have lived the nightmare of cleaning up data that was entered by
+multiple users into databases without any invalid data input errors to prevent the proliferation of error-filled data. Keeping data input
+clean and consistent is something I really value. I would like to explore more ways to accomplish that in future Ruby projects.  For
+now I used the  #is_a? method to accomplish some basic invalid input error goals. This method was a new find for me and I enjoyed 
+experimenting it.
+
+2. Time of Transaction - I added a timestamp to the transaction class because I often find timestamps are helpful in record-keeping and
+content management.
+
+3. Associating transactions with a given product - This is to track how many transactions a product has. 
+
+**Where do you still have room to grow?**
+I still have so much to learn. I am very aware of that. I need much more practice writing code. There’s so much more to learn, it’s kind
+of overwhelming. I am really glad to have the structure of the Ruby Nanodegree to help focus my effort. I think I could have spent
+8 weeks just trying out all the different ways to use Ruby public methods, blocks, and loops.  The realization that I am already starting some
+Object Oriented Programing and defining my own classes is very excited to me. I guess the answer to the question “Where do you still have
+room to grow?” is EVERYWHERE! ;)
