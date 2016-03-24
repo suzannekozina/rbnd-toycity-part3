@@ -31,7 +31,7 @@ class Product
 
   def add_to_products
     @@products.each do |toy|
-      raise DuplicateProductError, "DuplicateProductError: '#{self.title}' already exists." unless toy.title != title
+      raise DuplicateProductError, "'#{self.title}' already exists." unless toy.title != title
       end
 
     @@products << self
