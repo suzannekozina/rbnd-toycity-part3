@@ -5,7 +5,7 @@ class Transaction
   @@transactions = []
 
   def initialize (customer,product)
-    return puts "OutOfStockError: '#{product.title}' is out of stock." unless product.in_stock?
+    raise OutOfStockError, "OutOfStockError: '#{product.title}' is out of stock." unless product.in_stock?
     @customer = customer
     @product = product
     @id = @@transactions.length + 1
